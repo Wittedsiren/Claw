@@ -1,28 +1,28 @@
-import math
+from math import tan
 
 class Vector2:
-    x = 0
-    y = 0
+    X = 0
+    Y = 0
 
-    def __init__(self, x = 0 , y = 0):
-        self.x = x
-        self.y = y
+    def __init__(self, X = 0 , Y = 0):
+        self.X = X
+        self.Y = Y
     def __add__(self, a):
-        return Vector2(self.x + a.x, self.y + a.y)
+        return Vector2(self.X + a.X, self.Y + a.Y)
     def __sub__(self, a):
-        return Vector2(self.x - a.x, self.y - a.y)
+        return Vector2(self.X - a.X, self.Y - a.Y)
     def __mul__(self, a):
         if type(a) == float or type(a) == int:
-            return Vector2(self.x * a, self.y * a)
+            return Vector2(self.X * a, self.Y * a)
         else:             
-            return Vector2(self.x * a.x, self.y * a.y)
+            return Vector2(self.X * a.X, self.Y * a.Y)
     def __div__(self, a):
-        return Vector2(self.x / a.x, self.y / a.y)
+        return Vector2(self.X / a.X, self.Y / a.Y)
     def mag(self):
-        return (self.x**2 + self.y**2)**0.5
+        return (self.X**2 + self.Y**2)**0.5
     def dot(self, OtherVector):
-        return self.x * OtherVector.x + self.y * OtherVector.y
+        return self.X * OtherVector.X + self.Y * OtherVector.Y
     def angle(self):
-        return math.atan(self.y / self.x)
+        return math.atan(self.Y / self.X)
     
         
